@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DarkModeFlag from "../DarkModeFlag/DarkModeFlag";
-import {} from "../HandleBar/handlebar.scss";
+import {} from "./handlebar.scss";
 
 export default function HandleBar(props) {
   const [darkMode, setDarkMode] = useState(false);
@@ -15,8 +15,10 @@ export default function HandleBar(props) {
           onClick={() => {
             if (darkMode) {
               setDarkMode(false);
+              props.setMode("ligth");
             } else {
               setDarkMode(true);
+              props.setMode("dark");
             }
           }}
         >

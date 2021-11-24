@@ -1,0 +1,28 @@
+:root {
+    --bg-dark: #13293d;
+    --bg-light: #e8f1f2;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.light-mode {
+    background-color: var(--bg-light);
+}
+
+.dark-mode {
+    background-color: var(--bg-dark);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: rgb(231, 231, 231);
+    }
+}
