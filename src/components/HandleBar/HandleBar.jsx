@@ -15,7 +15,7 @@ export default function HandleBar(props) {
           onClick={() => {
             if (darkMode) {
               setDarkMode(false);
-              props.setMode("ligth");
+              props.setMode("light");
             } else {
               setDarkMode(true);
               props.setMode("dark");

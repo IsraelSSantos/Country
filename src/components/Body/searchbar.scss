@@ -1,0 +1,39 @@
+.searchbar {
+    width: 70%;
+    padding: 2% 6%;
+    display: flex;
+
+    .text-field {
+        outline: none;
+        width: 50%;
+    }
+}
+
+.ligth-mode {
+    .MuiOutlinedInput-root {
+        color: var(--text-color-dark);
+    }
+
+    .text-field {
+        label {
+            color: var(--text-color-dark);
+        }
+    }
+}
+
+.dark-mode {
+    .MuiOutlinedInput-root {
+        color: var(--text-color-light);
+    }
+
+    .text-field {
+        label {
+            color: var(--text-color-light);
+        }
+
+        fieldset {
+            border-color: rgb(192, 192, 192);
+            color: white;
+        }
+    }
+}

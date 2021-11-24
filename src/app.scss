@@ -1,6 +1,8 @@
 :root {
-    --bg-dark: #13293d;
-    --bg-light: #e8f1f2;
+    --bg-dark: #260520;
+    --bg-light: #E9E9E9;
+    --text-color-light: rgb(231, 231, 231);
+    --text-color-dark: #000;
 }
 
 * {
@@ -11,10 +13,12 @@
 }
 
 .light-mode {
+    transition: all 0.5s;
     background-color: var(--bg-light);
 }
 
 .dark-mode {
+    transition: all 0.5s;
     background-color: var(--bg-dark);
 
     h1,
@@ -23,6 +27,7 @@
     h4,
     h5,
     h6 {
-        color: rgb(231, 231, 231);
+        color: var(--text-color-light);
     }
+
 }

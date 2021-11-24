@@ -1,7 +1,7 @@
-import React, { useState } from "react";
 import { } from './app.scss';
+import React, { useState } from "react";
 import HandleBar from "./components/HandleBar/HandleBar";
-
+import Body from './components/Body/Body';
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className={`App ${mode}-mode`}>
       <HandleBar setMode={setMode} />
-      <h1>Body</h1>
+      <Body />
     </div >
   );
 }
