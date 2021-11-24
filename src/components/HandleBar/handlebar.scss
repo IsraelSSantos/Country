@@ -1,0 +1,27 @@
+.handlebar {
+    width: 100%;
+    display: flex;
+    padding: 0 5%;
+
+    .title {
+        width: 80%;
+    }
+
+    .dark-mode-container {
+        width: 30%;
+
+        button {
+            display: flex;
+            cursor: pointer;
+            border: 0;
+            background-color: white;
+        }
+
+        img {
+            align-self: center;
+            width: 36px;
+            height: 36px;
+        }
+
+    }
+}
