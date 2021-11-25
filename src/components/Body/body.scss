@@ -1,0 +1,13 @@
+.dark-mode {
+    .body {
+        transition: all 0.5s;
+        background-color: var(--bg-body-dark);
+    }
+}
+
+.light-mode {
+    .body {
+        transition: all 0.5s;
+        background-color: var(--bg-body-light);
+    }
+}

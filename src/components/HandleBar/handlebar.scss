@@ -1,7 +1,9 @@
 .handlebar {
     width: 100%;
     display: flex;
-    padding: 1% 5%;
+    padding: 2%;
+    border-bottom: 1px solid var(--border-gray);
+    box-shadow: -1px 1px 1px 0px rgba(184, 184, 184, 0.75);
 
     .title {
         width: 80%;
@@ -12,7 +14,8 @@
     }
 
     .dark-mode-container {
-        width: 30%;
+        margin-left: auto;
+        padding-right: 5%;
 
         button {
             display: flex;
