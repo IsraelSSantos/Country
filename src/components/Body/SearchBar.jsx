@@ -1,14 +1,19 @@
-import React from "react";
-import {} from "./searchbar.scss";
+import React, { useContext, useState } from "react";
+import { } from "./searchbar.scss";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Autocomplete from "@mui/material/Autocomplete";
+import DataContext from "../context/ValueContext";
 
 const options = ["Africa", "América", "Asia", "Europa", "Oceania"];
 
+
 export default function SearchBar() {
-  const [value, setValue] = React.useState(options[0]);
-  const [inputValue, setInputValue] = React.useState("");
+
+  const [value, setValue] = useState(options[0]);
+  const [inputValue, setInputValue] = useState("");
+
+  const dataContext = useContext(DataContext);
 
   return (
     <div className="searchbar">
@@ -18,31 +23,30 @@ export default function SearchBar() {
           label="Busque por um País"
           className="text-field"
           onChange={(e) => {
-            inputValue = e.target.value.trim();
+            console.log(e.target.value)
+            setInputValue(e.target.value.trim())
+            dataContext.setValueImput(e.target.value.trim())
           }}
         ></TextField>
         <Button
           variant="contained"
           onClick={() => {
-            console.log(inputValue);
+
           }}
         >
           Buscar
         </Button>
       </div>
       <div>
-        {/* <div>{`value: ${value !== null ? `'${value}'` : "null"}`}</div> */}
-        {/* <div>{`inputValue: '${inputValue}'`}</div> */}
         <br />
         <Autocomplete
           className="autoComplete"
           value={value}
-          onChange={(event, newValue) => {
+          onChange={(newValue) => {
             setValue(newValue);
           }}
-          inputValue={inputValue}
-          onInputChange={(event, newInputValue) => {
-            setInputValue(newInputValue);
+          onInputChange={(newInputValue) => {
+
           }}
           id="controllable-states-demo"
           options={options}
@@ -58,4 +62,6 @@ export default function SearchBar() {
       </div>
     </div>
   );
+
 }
+

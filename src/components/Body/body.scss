@@ -1,8 +1,15 @@
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .dark-mode {
     .body {
         transition: all 0.5s;
         background-color: var(--bg-body-dark);
     }
+
 }
 
 .light-mode {
@@ -10,4 +17,5 @@
         transition: all 0.5s;
         background-color: var(--bg-body-light);
     }
+
 }

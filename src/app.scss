@@ -15,6 +15,7 @@
     font-family: 'Lato', sans-serif;
 }
 
+
 .light-mode {
     transition: all 0.5s;
     background-color: var(--bg-light);
@@ -24,6 +25,7 @@
     transition: all 0.5s;
     background-color: var(--bg-dark);
 
+    p,
     h1,
     h2,
     h3,
