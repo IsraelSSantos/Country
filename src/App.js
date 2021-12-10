@@ -9,14 +9,12 @@ function App() {
   const [valueImput, setValueImput] = useState();
 
   return (
-
     <DataContext.Provider value={{ valueImput, setValueImput }}>
       <div className={`App ${mode}-mode`}>
         <HandleBar setMode={setMode} />
         <Body />
       </div >
     </DataContext.Provider>
-
   );
 }
 

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { } from "./body.scss";
 import SearchBar from "./SearchBar";
 import Card from './Card';
@@ -8,11 +8,16 @@ import axios from 'axios';
 export default function Body() {
 
   const data = useContext(DataContext);
+  const [country, setCountry] = useState([{}])
+
   async function callCountry() {
     let request = await axios.get(`https://restcountries.com/v3.1/name/${data.valueImput}`).then(response => {
       if (response.status == 200) {
-        console.log(response.data);
+        setCountry(response.data);
+        console.log(country);
       }
+    }).catch((error) => {
+      console.error('Ocorreu um erro: ' + error)
     })
   }
   useEffect(() => {
@@ -23,8 +28,19 @@ export default function Body() {
     <div className="body">
       <SearchBar />
       <div className="cardContainer">
-        <Card />
-        <h1> Contexto: {data.valueImput}</h1>
+        {
+          country.map(count => {
+            return (
+              <Card
+                name={count.altSpellings[2]}
+                population={count.population}
+              // region={ }
+              // capital={ }
+              // background={ }
+              />
+            )
+          })
+        }
       </div>
     </div>
   );
