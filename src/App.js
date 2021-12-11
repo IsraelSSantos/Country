@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HandleBar from "./components/HandleBar/HandleBar";
 import Body from './components/Body/Body';
-import DataContext from './components/context/ValueContext';
-import CountryDetail from './components/context/CountryDetail';
+import DataContext from './context/DataContext'
+import CountryDetail from './context/CountryDetail';
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
         <CountryDetail.Provider value={{ detail, setDetail }}>
           <div className={`App ${mode}-mode`}>
             <Routes>
-              <Route path="/" exact element={<HandleBar setMode={setMode} />, <Body />} />
+              <Route path="/" exact element={<><HandleBar setMode={setMode} /><Body /></>} />
               <Route path="/about" exact element={<HandleBar setMode={setMode} />} />
             </Routes>
           </div >

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { } from "./body.scss";
 import SearchBar from "./SearchBar";
 import Card from './Card';
-import DataContext from "../context/ValueContext";
-import CountryDetailContext from "../context/CountryDetail";
+import DataContext from "../../context/DataContext";
+import CountryDetailContext from "../../context/CountryDetail";
 import axios from 'axios';
 
 export default function Body() {
@@ -24,7 +24,7 @@ export default function Body() {
     })
   }
   useEffect(() => {
-    if (data.valueImput == "Africa" || data.valueImput == "América" || data.valueImput == "Asia" || data.valueImput == "Europe" || data.valueImput == "Oceania") {
+    if (data.valueImput == "Africa" || data.valueImput == "América" || data.valueImput == "Asia" || data.valueImput == "Europe" || data.valueImput == "Oceania" || data.valueImput == "Antarctic") {
       if (data.valueImput == "América") {
         data.valueImput = "americas"
       }
