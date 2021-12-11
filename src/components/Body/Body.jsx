@@ -9,9 +9,10 @@ export default function Body() {
 
   const data = useContext(DataContext);
   const [country, setCountry] = useState([{}])
+  let url = "https://restcountries.com/v3.1/region/"
 
   async function callCountry() {
-    let request = await axios.get(`https://restcountries.com/v3.1/name/${data.valueImput}`).then(response => {
+    let request = await axios.get(url + `${data.valueImput ? data.valueImput : 'a'}?fullText=true`).then(response => {
       if (response.status == 200) {
         setCountry(response.data);
         console.log(country);
@@ -21,6 +22,14 @@ export default function Body() {
     })
   }
   useEffect(() => {
+    if (data.valueImput == "Africa" || data.valueImput == "América" || data.valueImput == "Asia" || data.valueImput == "Europe" || data.valueImput == "Oceania") {
+      if (data.valueImput == "América") {
+        data.valueImput = "americas"
+      }
+      url = "https://restcountries.com/v3.1/region/"
+    } else {
+      url = "https://restcountries.com/v3.1/translation/"
+    }
     callCountry()
   }, [data.valueImput])
 
@@ -32,11 +41,12 @@ export default function Body() {
           country.map(count => {
             return (
               <Card
-                name={count.altSpellings[2]}
-                population={count.population}
-              // region={ }
-              // capital={ }
-              // background={ }
+                key={count.altSpellings}
+                name={count.altSpellings ? count.translations.por.common : 'Desconhecido'}
+                population={count.population ? count.population : ''}
+                region={count.region ? count.region : ''}
+                capital={count.capital ? count.capital : ''}
+                background={count.flags ? count.flags.png : ''}
               />
             )
           })
@@ -45,5 +55,3 @@ export default function Body() {
     </div>
   );
 }
-
-

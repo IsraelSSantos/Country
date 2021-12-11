@@ -1,4 +1,11 @@
+.body {
+    position: relative;
+    min-height: 88.1vh;
+}
+
 .cardContainer {
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -16,7 +23,7 @@
 .light-mode {
     .body {
         transition: all 0.5s;
-        background-color: var(--bg-body-light);
+        background-color: #f1f1f1;
     }
 
 }

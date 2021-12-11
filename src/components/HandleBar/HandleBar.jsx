@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DarkModeFlag from "../DarkModeFlag/DarkModeFlag";
-import {} from "./handlebar.scss";
+import { } from "./handlebar.scss";
 
 export default function HandleBar(props) {
   const [darkMode, setDarkMode] = useState(false);

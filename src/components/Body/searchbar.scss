@@ -1,9 +1,12 @@
 .searchbar {
     display: flex;
     padding: 2% 6%;
+    width: 90%;
+    margin: 0 auto;
 
     .bar {
-        width: 70%;
+        width: 80%;
+        margin: 0 0 0 4%;
 
         .text-field {
             outline: none;
@@ -24,7 +27,6 @@
             }
         }
 
-        .autoComplete {}
     }
 }
 

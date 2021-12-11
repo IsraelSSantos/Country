@@ -1,22 +1,26 @@
 import React, { useContext, useState } from "react";
 import { } from "./searchbar.scss";
 import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 import Autocomplete from "@mui/material/Autocomplete";
 import DataContext from "../context/ValueContext";
-
-const options = ["Africa", "América", "Asia", "Europa", "Oceania"];
+import $ from 'jquery';
+const options = ["Africa", "América", "Asia", "Europe", "Oceania"];
 
 
 export default function SearchBar() {
 
-  const [value, setValue] = useState(options[0]);
-  const [inputValue, setInputValue] = useState("");
-
+  const [value, setValue] = useState();
+  const [inputValue, setInputValue] = useState("Africa");
   const dataContext = useContext(DataContext);
 
+  const closeButton = $("MuiAutocomplete-clearIndicator");
+  $(closeButton.on('click', (e) => {
+    console.log('clicou')
+    e.preventDefault();
+  }))
   return (
-    <div className="searchbar">
+
+    < div className="searchbar" >
       <div className="bar">
         <TextField
           id="outlined-basic"
@@ -24,43 +28,39 @@ export default function SearchBar() {
           className="text-field"
           onChange={(e) => {
             console.log(e.target.value)
-            setInputValue(e.target.value.trim())
             dataContext.setValueImput(e.target.value.trim())
-          }}
-        ></TextField>
-        <Button
-          variant="contained"
-          onClick={() => {
-
           }}
         >
           Buscar
-        </Button>
+        </TextField>
       </div>
       <div>
+        <br />
+        <div>{`value: ${value !== null ? `'${value}'` : ""}`}</div> */
+        <div>{`inputValue: '${inputValue}'`}</div>
         <br />
         <Autocomplete
           className="autoComplete"
           value={value}
-          onChange={(newValue) => {
+          onChange={(event, newValue) => {
             setValue(newValue);
+            setInputValue(newValue)
+            dataContext.setValueImput(newValue)
           }}
-          onInputChange={(newInputValue) => {
-
-          }}
+          inputValue={value}
           id="controllable-states-demo"
           options={options}
           sx={{ width: 300 }}
           renderInput={(params) => (
             <TextField
               {...params}
-              label="Filtrar por Região"
+              label="Filtrar por Continente"
               className="text-field"
             />
           )}
         />
       </div>
-    </div>
+    </div >
   );
 
 }

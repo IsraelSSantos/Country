@@ -1,5 +1,5 @@
 import { createContext } from 'react';
 
-const DataContext = createContext(null);
+const DataContext = createContext('Africa');
 
 export default DataContext;

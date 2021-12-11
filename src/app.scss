@@ -8,6 +8,7 @@
     --border-gray: rgb(156, 156, 156);
 }
 
+
 * {
     margin: 0px;
     padding: 0px;
@@ -15,10 +16,11 @@
     font-family: 'Lato', sans-serif;
 }
 
-
 .light-mode {
     transition: all 0.5s;
     background-color: var(--bg-light);
+
+
 }
 
 .dark-mode {
@@ -34,5 +36,6 @@
     h6 {
         color: var(--text-color-light);
     }
+
 
 }
