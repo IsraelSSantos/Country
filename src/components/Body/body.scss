@@ -6,10 +6,15 @@
 .cardContainer {
     width: 80%;
     margin: 0 auto;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    cursor: pointer;
+    display: flex;
+
+    a {
+        width: 19%;
+        margin: 1%;
+        cursor: pointer;
+    }
 }
 
 .dark-mode {

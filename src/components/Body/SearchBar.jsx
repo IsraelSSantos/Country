@@ -27,7 +27,6 @@ export default function SearchBar() {
           label="Busque por um País"
           className="text-field"
           onChange={(e) => {
-            console.log(e.target.value)
             dataContext.setValueImput(e.target.value.trim())
           }}
         >
@@ -35,10 +34,6 @@ export default function SearchBar() {
         </TextField>
       </div>
       <div>
-        <br />
-        <div>{`value: ${value !== null ? `'${value}'` : ""}`}</div> */
-        <div>{`inputValue: '${inputValue}'`}</div>
-        <br />
         <Autocomplete
           className="autoComplete"
           value={value}

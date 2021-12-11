@@ -1,20 +1,30 @@
 import { } from './app.scss';
 import React, { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HandleBar from "./components/HandleBar/HandleBar";
 import Body from './components/Body/Body';
 import DataContext from './components/context/ValueContext';
+import CountryDetail from './components/context/CountryDetail';
+
 function App() {
 
   const [mode, setMode] = useState('light');
   const [valueImput, setValueImput] = useState();
+  const [detail, setDetail] = useState();
 
   return (
-    <DataContext.Provider value={{ valueImput, setValueImput }}>
-      <div className={`App ${mode}-mode`}>
-        <HandleBar setMode={setMode} />
-        <Body />
-      </div >
-    </DataContext.Provider>
+    <BrowserRouter>
+      <DataContext.Provider value={{ valueImput, setValueImput }}>
+        <CountryDetail.Provider value={{ detail, setDetail }}>
+          <div className={`App ${mode}-mode`}>
+            <Routes>
+              <Route path="/" exact element={<HandleBar setMode={setMode} />, <Body />} />
+              <Route path="/about" exact element={<HandleBar setMode={setMode} />} />
+            </Routes>
+          </div >
+        </CountryDetail.Provider>
+      </DataContext.Provider>
+    </BrowserRouter>
   );
 }
 

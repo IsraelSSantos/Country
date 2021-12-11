@@ -8,7 +8,9 @@ export default function HandleBar(props) {
   return (
     <div className="handlebar">
       <div className="title">
-        <h1>Where in the World?</h1>
+        <a href="">
+          <h1>Where in the World?</h1>
+        </a>
       </div>
       <div className="dark-mode-container">
         <button
