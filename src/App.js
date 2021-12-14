@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HandleBar from "./components/HandleBar/HandleBar";
 import Body from './components/Body/Body';
+import Detail from './components/Detail/Detail';
 import DataContext from './context/DataContext'
 import CountryDetail from './context/CountryDetail';
 
@@ -19,7 +20,7 @@ function App() {
           <div className={`App ${mode}-mode`}>
             <Routes>
               <Route path="/" exact element={<><HandleBar setMode={setMode} /><Body /></>} />
-              <Route path="/about" exact element={<HandleBar setMode={setMode} />} />
+              <Route path="/detail" exact element={<><HandleBar setMode={setMode} /> <Detail /> </>} />
             </Routes>
           </div >
         </CountryDetail.Provider>

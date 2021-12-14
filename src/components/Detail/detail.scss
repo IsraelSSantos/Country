@@ -1,0 +1,70 @@
+.detailScreen {
+    border: 1px solid rgb(0, 0, 0);
+    margin: 2% auto;
+    width: 80%;
+    padding: 0 2%;
+
+    .backButton {
+        display: flex;
+        padding: 2%;
+
+        a {
+            transition: all 0.2s;
+            text-decoration: none;
+            color: black;
+            border: 2px solid #ccc;
+            width: 10%;
+            padding: 10px;
+            box-shadow: -1px 1px 5px 1px rgba(185, 185, 185, 0.75);
+
+            span {
+                padding: 0 15% 0 0;
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .detailContainer {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        background-color: cyan;
+
+        .countryFlag {
+            width: 50%;
+            padding: 5%;
+
+            .flag {
+                background-color: blue;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 400px;
+                height: 300px;
+            }
+        }
+
+        .countryInfoContainer {
+            width: 50%;
+            padding: 5%;
+            background-color: red;
+            line-height: 25px;
+
+            span {
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+.dark-mode {
+    .detailScreen {
+        .backButton {
+            a {
+                transition: all 0.2s;
+                border: 2px solid rgb(134, 134, 134);
+                box-shadow: -1px 1px 5px 1px rgba(153, 153, 153, 0.75);
+            }
+        }
+    }
+}
