@@ -37,3 +37,45 @@
 
     }
 }
+
+@media screen and (max-width: 900px) {
+    .handlebar {
+        width: 100%;
+        display: flex;
+        padding: 3% 2%;
+        border-bottom: 1px solid var(--border-gray);
+        box-shadow: -1px 1px 1px 0px rgba(184, 184, 184, 0.75);
+
+        .title {
+            width: 80%;
+
+            a {
+                text-decoration: none;
+                color: black;
+
+                h1 {
+                    font-weight: 900;
+                }
+            }
+        }
+
+        .dark-mode-container {
+            margin-left: 0;
+            padding-right: 0%;
+
+            button {
+                display: flex;
+                cursor: pointer;
+                border: 0;
+                background-color: transparent;
+            }
+
+            img {
+                align-self: center;
+                width: 30px;
+                height: 30px;
+            }
+
+        }
+    }
+}

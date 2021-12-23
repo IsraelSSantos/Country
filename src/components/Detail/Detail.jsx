@@ -32,7 +32,6 @@ export default function Detail() {
                         <p>Capital: <span>{infoCountry.detail.capital}</span></p>
                         <p>Top Level Domain: <span>{infoCountry.detail.topLevelD}</span></p>
                         <p>Size: <span> {infoCountry.detail.size} Km²</span></p>
-                        {/* <p>Languages: <span>NAME COUNTRY</span></p> */}
                         <br />
                         <div className='borderCountry'>
                             <p>Border Countries: </p>

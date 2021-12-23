@@ -33,9 +33,8 @@ export default function SearchBar() {
           Buscar
         </TextField>
       </div>
-      <div>
+      <div className="autoComplete">
         <Autocomplete
-          className="autoComplete"
           value={value}
           onChange={(event, newValue) => {
             setValue(newValue);

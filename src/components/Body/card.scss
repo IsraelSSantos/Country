@@ -21,3 +21,23 @@
         }
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .Card {
+
+        .flag {
+            height: 180px;
+        }
+
+        .content {
+            width: 100%;
+            margin: 0 auto;
+            padding: 1% 5%;
+            background-color: #0000;
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

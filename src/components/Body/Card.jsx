@@ -17,7 +17,6 @@ export default function Card(props) {
         languages,
         size,
         flag
-        // currencies
     } = props;
 
     function setToDetail() {
@@ -27,7 +26,6 @@ export default function Card(props) {
             region: `${region}`,
             capital: `${capital}`,
             flag: `${flag}`,
-            // currencies: `${currencies}`,
             languages: `${languages}`,
             borderCountries: ``,
             background: `${background}`,
@@ -39,10 +37,6 @@ export default function Card(props) {
 
         console.log(detailInfo.detail);
     }
-
-    // useEffect(() => {
-    //     console.log(detailInfo.detail);
-    // }, [detailInfo.detail])
 
     return (
         <div className='Card' onClick={setToDetail} >

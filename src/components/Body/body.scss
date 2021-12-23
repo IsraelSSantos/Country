@@ -47,3 +47,47 @@
     }
 
 }
+
+@media screen and (max-width: 1550px) {
+    .cardContainer {
+        a {
+            width: 28%;
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .cardContainer {
+        a {
+            width: 35%;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .cardContainer {
+        flex-direction: column;
+
+
+        a {
+            margin: 1% auto;
+            width: 40%;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .cardContainer {
+        a {
+            width: 55%;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cardContainer {
+        a {
+            width: 70%;
+        }
+    }
+}
