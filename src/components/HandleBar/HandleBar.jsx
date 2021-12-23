@@ -9,7 +9,7 @@ export default function HandleBar(props) {
   return (
     <div className="handlebar">
       <div className="title">
-        <Link to="/">
+        <Link to="/" refresh={true}>
           <h1>Where in the World?</h1>
         </Link>
       </div>
@@ -31,3 +31,4 @@ export default function HandleBar(props) {
     </div>
   );
 }
+ 

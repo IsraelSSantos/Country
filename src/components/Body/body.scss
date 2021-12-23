@@ -17,6 +17,19 @@
         text-decoration: none;
         color: black;
     }
+
+    .loader {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        padding-top: 200px;
+
+        span {
+            width: 60px !important;
+            height: 60px !important;
+            margin: 0 auto;
+        }
+    }
 }
 
 .dark-mode {
